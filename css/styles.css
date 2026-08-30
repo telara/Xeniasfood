@@ -298,8 +298,8 @@ em {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(28, 26, 24, 0.62) 0%, rgba(28, 26, 24, 0.3) 100%),
-    url('../images/xenia-oven.png') center/cover no-repeat;
+    linear-gradient(135deg, rgba(28, 26, 24, 0.68) 0%, rgba(28, 26, 24, 0.42) 100%),
+    url('../images/hero-harvest.png') center/cover no-repeat;
   z-index: 0;
 }
 
