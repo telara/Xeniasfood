@@ -320,17 +320,25 @@ em {
   margin-bottom: var(--space-md);
 }
 
+.hero-headline {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: var(--color-cream);
+}
+
 .hero-content h1 em {
   color: var(--color-gold-light);
 }
 
 .hero-subline {
   font-family: var(--font-body);
-  font-style: normal;
-  font-weight: 300;
-  font-size: 0.72em;
-  letter-spacing: 0.06em;
-  color: rgba(247, 243, 237, 0.88);
+  font-style: italic;
+  font-weight: 200;
+  font-size: 0.76em;
+  letter-spacing: 0.08em;
+  color: rgba(247, 243, 237, 0.9);
 }
 
 .hero-lead {
@@ -552,6 +560,31 @@ em {
 .credentials-links .btn-ghost:hover {
   background: var(--color-cream);
   color: var(--color-charcoal);
+}
+
+/* Oven feature — between credentials & contact */
+.oven-feature {
+  padding-block: var(--space-lg);
+  background: var(--color-cream);
+}
+
+.oven-feature .about-grid {
+  grid-template-columns: 0.95fr;
+}
+
+.oven-feature .about-image {
+  max-width: 560px;
+  aspect-ratio: 4 / 5;
+  max-height: 680px;
+  overflow: hidden;
+}
+
+.oven-feature .about-image img {
+  object-fit: cover;
+  object-position: center center;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.06);
 }
 
 /* Contact */

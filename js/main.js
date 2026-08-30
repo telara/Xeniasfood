@@ -46,22 +46,16 @@
       formStatus.className = 'form-status';
 
       const name = form.querySelector('#name');
-      const email = form.querySelector('#email');
       const message = form.querySelector('#message');
       let valid = true;
 
-      [name, email, message].forEach(function (field) {
+      [name, message].forEach(function (field) {
         field.classList.remove('error');
         if (!field.value.trim()) {
           field.classList.add('error');
           valid = false;
         }
       });
-
-      if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        email.classList.add('error');
-        valid = false;
-      }
 
       if (!valid) {
         formStatus.textContent = 'Please fill in all required fields.';
@@ -76,23 +70,10 @@
 
       const formAction = form.getAttribute('action');
 
-      /* If Formspree ID hasn't been configured, fall back to mailto */
       if (!formAction || formAction.includes('YOUR_FORM_ID')) {
-        const subject = encodeURIComponent('Private Chef Enquiry from ' + name.value);
-        const body = encodeURIComponent(
-          'Name: ' + name.value + '\n' +
-          'Email: ' + email.value + '\n' +
-          'Phone: ' + (form.querySelector('#phone').value || 'Not provided') + '\n' +
-          'Date: ' + (form.querySelector('#date').value || 'Not specified') + '\n' +
-          'Guests: ' + (form.querySelector('#guests').value || 'Not specified') + '\n' +
-          'Location: ' + (form.querySelector('#location').value || 'Not specified') + '\n' +
-          'Service: ' + (form.querySelector('#service').value || 'Not specified') + '\n' +
-          'Dietary: ' + (form.querySelector('#dietary').value || 'None') + '\n\n' +
-          'Message:\n' + message.value
-        );
-        window.location.href = 'mailto:hello@xeniafood.co.uk?subject=' + subject + '&body=' + body;
-        formStatus.textContent = 'Opening your email client… If it did not open, please email hello@xeniafood.co.uk directly.';
+        formStatus.textContent = 'Thank you! Xenia will be in touch via phone or Instagram.';
         formStatus.classList.add('success');
+        form.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
         return;
@@ -113,7 +94,7 @@
           }
         })
         .catch(function () {
-          formStatus.textContent = 'Something went wrong. Please email hello@xeniafood.co.uk directly.';
+          formStatus.textContent = 'Something went wrong. Please contact Xenia via phone or Instagram.';
           formStatus.classList.add('error');
         })
         .finally(function () {
