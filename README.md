@@ -12,3 +12,9 @@ Private chef website for Xenia — London & Wiltshire.
 4. Save — the site updates in about 1 minute
 
 No GitHub Actions workflow is required for this static site.
+
+## Contact form
+
+Enquiries are sent via [FormSubmit](https://formsubmit.co).
+
+**One-time activation:** After the first test submission, FormSubmit sends a confirmation email to that inbox. Click the activation link before the form will deliver live enquiries.

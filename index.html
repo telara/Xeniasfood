@@ -76,8 +76,8 @@
       <div class="hero-bg" role="presentation"></div>
       <div class="container hero-content">
         <p class="eyebrow">Private Chef · London &amp; Wiltshire</p>
-        <h1 id="hero-heading"><span class="hero-headline">Seasonal cooking,</span><br><span class="hero-subline">effortlessly at home</span></h1>
-        <p class="hero-lead">Xenia brings restaurant-quality, ingredient-led menus to your table — from intimate dinner parties in London to relaxed gatherings in the Wiltshire countryside.</p>
+        <h1 id="hero-heading"><span class="hero-headline">Fresh, seasonal food</span><br><span class="hero-subline">effortlessly served at home</span></h1>
+        <p class="hero-lead">Xenia brings gormet quality, ingredient-led menus to your table — from intimate dinner parties in London to relaxed gatherings in the Wiltshire countryside.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Enquire &amp; Book</a>
           <a href="https://www.instagram.com/x_l_food/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Follow @x_l_food</a>
@@ -234,7 +234,11 @@
           <p class="contact-note">Most bookings require advance notice. Urgent requests depend on availability.</p>
         </div>
 
-        <form class="contact-form" id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <form class="contact-form" id="booking-form" action="https://formsubmit.co/ajax/taraelsen@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New booking enquiry — XENIA website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
           <h3 class="form-title">Send an enquiry</h3>
 
           <div class="form-row">
@@ -242,20 +246,27 @@
               <label for="name">Full name <span aria-hidden="true">*</span></label>
               <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
             </div>
+          </div>
+
+          <div class="form-row">
             <div class="form-group">
-              <label for="phone">Phone / WhatsApp</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+44 7000 000 000">
+              <label for="phone">Phone / WhatsApp <span aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+44">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="youremail@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="date">Preferred date <span aria-hidden="true">*</span></label>
+              <input type="date" id="date" name="date" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="date">Preferred date</label>
-              <input type="date" id="date" name="date">
-            </div>
-            <div class="form-group">
-              <label for="guests">Number of guests</label>
-              <select id="guests" name="guests">
+              <label for="guests">Number of guests <span aria-hidden="true">*</span></label>
+              <select id="guests" name="guests" required>
                 <option value="">Select…</option>
                 <option value="2-4">2–4 guests</option>
                 <option value="5-8">5–8 guests</option>
@@ -264,11 +275,10 @@
                 <option value="30+">30+ guests</option>
               </select>
             </div>
-          </div>
-
-          <div class="form-group">
-            <label for="location">Location / Postcode</label>
-            <input type="text" id="location" name="location" placeholder="e.g. SW3 or Salisbury">
+            <div class="form-group">
+              <label for="location">Location / Postcode</label>
+              <input type="text" required id="location" name="location" placeholder="e.g. SW3 or Salisbury">
+            </div>
           </div>
 
           <div class="form-group">
@@ -290,8 +300,8 @@
           </div>
 
           <div class="form-group">
-            <label for="message">Tell us about your occasion <span aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" rows="4" required placeholder="Share any details about your event, menu preferences or special requests…"></textarea>
+            <label for="message">Tell us about the occasion</label>
+            <textarea id="message" name="message" rows="4" placeholder="Share any details about your event, menu preferences or special requests…"></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary btn-full">Send enquiry</button>
@@ -303,7 +313,7 @@
     <section class="section oven-feature" aria-label="Xenia in the kitchen">
       <div class="container about-grid">
         <div class="about-image">
-          <img src="images/xenia-oven.png" alt="Xenia checking dishes in a country kitchen oven" width="560" height="700" loading="lazy">
+          <img src="images/xenia-oven.jpeg" alt="Xenia checking dishes in a country kitchen oven" width="560" height="700" loading="lazy">
         </div>
       </div>
     </section>
@@ -326,7 +336,9 @@
           <li><a href="https://www.instagram.com/x_l_food/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
         </ul>
       </nav>
-      <p class="footer-copy">&copy; 2026 made with 🩷 by <a href="https://github.com/telara" target="_blank" rel="noopener noreferrer">telara</a></p>
+      <p class="footer-copy">&copy; 2026 made with 🧡 by <a href="https://github.com/telara" target="_blank" rel="noopener noreferrer">telara</a></p>
+      <!-- <p class="footer-copy">&copy; 2026 made with 💛 by <a href="https://github.com/telara" target="_blank" rel="noopener noreferrer">telara</a></p> -->
+      <!-- <p class="footer-copy">&copy; 2026 made with 🩷 by <a href="https://github.com/telara" target="_blank" rel="noopener noreferrer">telara</a></p> -->
     </div>
   </footer>
 

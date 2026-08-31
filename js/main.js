@@ -46,10 +46,13 @@
       formStatus.className = 'form-status';
 
       const name = form.querySelector('#name');
-      const message = form.querySelector('#message');
+      const email = form.querySelector('#email');
+      const phone = form.querySelector('#phone');
+      const date = form.querySelector('#date');
+      const guests = form.querySelector('#guests');
       let valid = true;
 
-      [name, message].forEach(function (field) {
+      [name, phone, date, guests].forEach(function (field) {
         field.classList.remove('error');
         if (!field.value.trim()) {
           field.classList.add('error');
@@ -57,8 +60,16 @@
         }
       });
 
+      email.classList.remove('error');
+      if (email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        email.classList.add('error');
+        valid = false;
+      }
+
       if (!valid) {
-        formStatus.textContent = 'Please fill in all required fields.';
+        formStatus.textContent = email.classList.contains('error')
+          ? 'Please enter a valid email address.'
+          : 'Please fill in all required fields.';
         formStatus.classList.add('error');
         return;
       }
@@ -70,10 +81,9 @@
 
       const formAction = form.getAttribute('action');
 
-      if (!formAction || formAction.includes('YOUR_FORM_ID')) {
-        formStatus.textContent = 'Thank you! Xenia will be in touch via phone or Instagram.';
-        formStatus.classList.add('success');
-        form.reset();
+      if (!formAction) {
+        formStatus.textContent = 'Something went wrong. Please contact Xenia via phone or Instagram.';
+        formStatus.classList.add('error');
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
         return;
