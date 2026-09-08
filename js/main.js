@@ -52,7 +52,7 @@
       const guests = form.querySelector('#guests');
       let valid = true;
 
-      [name, phone, date, guests].forEach(function (field) {
+      [name, email, phone, date, guests].forEach(function (field) {
         field.classList.remove('error');
         if (!field.value.trim()) {
           field.classList.add('error');
@@ -60,14 +60,13 @@
         }
       });
 
-      email.classList.remove('error');
       if (email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
         email.classList.add('error');
         valid = false;
       }
 
       if (!valid) {
-        formStatus.textContent = email.classList.contains('error')
+        formStatus.textContent = email.classList.contains('error') && email.value.trim()
           ? 'Please enter a valid email address.'
           : 'Please fill in all required fields.';
         formStatus.classList.add('error');

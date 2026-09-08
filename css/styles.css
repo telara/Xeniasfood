@@ -712,6 +712,17 @@ em {
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 
+.form-group select {
+  padding-right: 2.5rem;
+  appearance: none;
+  background-color: var(--color-white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%233d3832' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.75rem;
+  cursor: pointer;
+}
+
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
