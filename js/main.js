@@ -82,7 +82,7 @@
       const formAction = form.getAttribute('action');
 
       if (!formAction) {
-        formStatus.textContent = 'Something went wrong. Please contact Xenia via phone or Instagram.';
+        formStatus.textContent = 'Something went wrong. Please try again, or reach Xenia on Instagram.';
         formStatus.classList.add('error');
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
@@ -104,7 +104,7 @@
           }
         })
         .catch(function () {
-          formStatus.textContent = 'Something went wrong. Please contact Xenia via phone or Instagram.';
+          formStatus.textContent = 'Something went wrong. Please try again, or reach Xenia on Instagram.';
           formStatus.classList.add('error');
         })
         .finally(function () {
